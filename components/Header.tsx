@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, MapPin, Search, ShoppingCart, ChevronDown } from 'lucide-react';
+import { Menu, X, MapPin, Search, ShoppingCart, ChevronDown, Phone, Mail } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 
 const Header: React.FC = () => {
@@ -35,16 +35,48 @@ const Header: React.FC = () => {
                  <span className="text-yellow-500 text-4xl leading-none">.</span>
                </div>
             </Link>
-            <button 
-              className="md:hidden p-2 text-gray-600"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-            >
-              {isMenuOpen ? <X /> : <Menu />}
-            </button>
+            <div className="flex items-center gap-2 md:hidden">
+              <Link 
+                to="/contact"
+                className="p-2 border-2 border-blue-900 text-blue-900 rounded-lg"
+              >
+                <Mail className="w-5 h-5" />
+              </Link>
+              <a 
+                href="tel:18003567464"
+                className="p-2 bg-blue-900 text-white rounded-lg"
+              >
+                <Phone className="w-5 h-5" />
+              </a>
+              <button 
+                className="p-2 text-gray-600"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+              >
+                {isMenuOpen ? <X /> : <Menu />}
+              </button>
+            </div>
           </div>
 
-          {/* Search & Store Locator (Desktop) */}
-          <div className="hidden md:flex flex-1 max-w-2xl mx-8 items-center space-x-4">
+          {/* Call & Contact Buttons (Desktop) */}
+          <div className="hidden md:flex items-center space-x-3">
+            <Link 
+              to="/contact"
+              className="flex items-center border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-semibold text-sm px-4 py-2 rounded-lg transition-all"
+            >
+              <Mail className="w-4 h-4 mr-2" />
+              Contact
+            </Link>
+            <a 
+              href="tel:18003567464"
+              className="flex items-center bg-blue-900 hover:bg-blue-800 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-all transform hover:scale-105 shadow-md"
+            >
+              <Phone className="w-4 h-4 mr-2" />
+              Call Us
+            </a>
+          </div>
+
+          {/* Search & Store Locator (Desktop) - COMMENTED OUT */}
+          {/* <div className="hidden md:flex flex-1 max-w-2xl mx-8 items-center space-x-4">
             <div className="relative flex-1">
               <input 
                 type="text" 
@@ -57,7 +89,7 @@ const Header: React.FC = () => {
               <MapPin className="w-4 h-4 mr-1" />
               Find a Store
             </button>
-          </div>
+          </div> */}
 
         </div>
       </div>

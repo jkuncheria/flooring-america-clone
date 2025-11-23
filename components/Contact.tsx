@@ -1,7 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, Mail, Phone, MapPin, ChevronDown, Clock, Facebook, Instagram, Twitter, Youtube, Calendar, Users } from 'lucide-react';
 
-const Contact: React.FC = () => {
+interface ContactProps {
+  simplified?: boolean;
+}
+
+const Contact: React.FC<ContactProps> = ({ simplified = false }) => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -260,8 +264,10 @@ const Contact: React.FC = () => {
 
         </div>
 
-        {/* Store Hours & Location Section */}
-        <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
+        {/* Store Hours & Location Section - Only show on full Contact page */}
+        {!simplified && (
+          <>
+            <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="bg-white rounded-2xl shadow-lg p-8 md:p-10 border border-gray-100">
             <div className="flex items-center mb-6">
               <div className="bg-blue-50 p-3 rounded-xl mr-4">
@@ -315,94 +321,60 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Social Media & Additional Info */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-8 text-white text-center">
-            <div className="bg-white bg-opacity-20 p-4 rounded-full inline-flex mb-4">
-              <Calendar className="w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold mb-3">Schedule a Consultation</h3>
-            <p className="text-blue-100 mb-4 text-sm">
-              Book a free in-home consultation to see samples in your space and get expert recommendations.
-            </p>
-            <button className="bg-white text-blue-900 hover:bg-gray-100 font-bold py-2 px-6 rounded-lg transition-all">
-              Book Now
-            </button>
-          </div>
+            {/* Social Media & Additional Info */}
+            <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-8 text-white text-center">
+                <div className="bg-white bg-opacity-20 p-4 rounded-full inline-flex mb-4">
+                  <Calendar className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Schedule a Consultation</h3>
+                <p className="text-blue-100 mb-4 text-sm">
+                  Book a free in-home consultation to see samples in your space and get expert recommendations.
+                </p>
+                <button className="bg-white text-blue-900 hover:bg-gray-100 font-bold py-2 px-6 rounded-lg transition-all">
+                  Book Now
+                </button>
+              </div>
 
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-8 text-white text-center">
-            <div className="bg-white bg-opacity-20 p-4 rounded-full inline-flex mb-4">
-              <Users className="w-8 h-8" />
-            </div>
-            <h3 className="text-xl font-bold mb-3">Join Our Community</h3>
-            <p className="text-blue-100 mb-4 text-sm">
-              Follow us on social media for design inspiration, special offers, and flooring tips.
-            </p>
-            <div className="flex justify-center gap-3">
-              <a href="#" className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-all">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-all">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-all">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-all">
-                <Youtube className="w-5 h-5" />
-              </a>
-            </div>
-          </div>
+              <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-8 text-white text-center">
+                <div className="bg-white bg-opacity-20 p-4 rounded-full inline-flex mb-4">
+                  <Users className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Join Our Community</h3>
+                <p className="text-blue-100 mb-4 text-sm">
+                  Follow us on social media for design inspiration, special offers, and flooring tips.
+                </p>
+                <div className="flex justify-center gap-3">
+                  <a href="#" className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-all">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-all">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-all">
+                    <Twitter className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="bg-white bg-opacity-20 hover:bg-opacity-30 p-2 rounded-lg transition-all">
+                    <Youtube className="w-5 h-5" />
+                  </a>
+                </div>
+              </div>
 
-          <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-8 text-white text-center">
-            <div className="bg-white bg-opacity-20 p-4 rounded-full inline-flex mb-4">
-              <Phone className="w-8 h-8" />
+              <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-8 text-white text-center">
+                <div className="bg-white bg-opacity-20 p-4 rounded-full inline-flex mb-4">
+                  <Phone className="w-8 h-8" />
+                </div>
+                <h3 className="text-xl font-bold mb-3">Need Immediate Help?</h3>
+                <p className="text-blue-100 mb-4 text-sm">
+                  Call us directly for urgent questions or to speak with a flooring specialist right away.
+                </p>
+                <a href="tel:18003567464" className="bg-white text-blue-900 hover:bg-gray-100 font-bold py-2 px-6 rounded-lg transition-all inline-block">
+                  1-800-FLOORING
+                </a>
+              </div>
             </div>
-            <h3 className="text-xl font-bold mb-3">Need Immediate Help?</h3>
-            <p className="text-blue-100 mb-4 text-sm">
-              Call us directly for urgent questions or to speak with a flooring specialist right away.
-            </p>
-            <a href="tel:18003567464" className="bg-white text-blue-900 hover:bg-gray-100 font-bold py-2 px-6 rounded-lg transition-all inline-block">
-              1-800-FLOORING
-            </a>
-          </div>
-        </div>
-
-        {/* FAQ Section */}
-        <div className="mt-20">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Quick answers to common questions about contacting us and our services.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-              <h4 className="font-bold text-gray-900 mb-2">How quickly will you respond?</h4>
-              <p className="text-gray-600 text-sm">
-                We typically respond to all inquiries within 24 hours. For urgent matters, please call us directly.
-              </p>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-              <h4 className="font-bold text-gray-900 mb-2">Do you offer free estimates?</h4>
-              <p className="text-gray-600 text-sm">
-                Yes! We offer free, no-obligation estimates for all flooring projects. Schedule a consultation today.
-              </p>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-              <h4 className="font-bold text-gray-900 mb-2">Can I visit your showroom?</h4>
-              <p className="text-gray-600 text-sm">
-                Absolutely! Our showroom is open during regular business hours. No appointment needed, but we recommend calling ahead for large groups.
-              </p>
-            </div>
-            <div className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm">
-              <h4 className="font-bold text-gray-900 mb-2">What areas do you serve?</h4>
-              <p className="text-gray-600 text-sm">
-                We serve Wauconda and surrounding communities. Contact us to confirm if we service your area.
-              </p>
-            </div>
-          </div>
-        </div>
+          </>
+        )}
 
       </div>
     </section>

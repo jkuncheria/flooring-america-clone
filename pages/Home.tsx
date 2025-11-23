@@ -5,16 +5,18 @@ import Difference from '../components/Difference';
 import Visualizer from '../components/Visualizer';
 import Inspiration from '../components/Inspiration';
 import Testimonials from '../components/Testimonials';
+import Contact from '../components/Contact';
 
 const Home: React.FC = () => {
   return (
     <>
       <Hero />
       <Categories />
-      <Difference />
       <Visualizer />
+      <Difference />
       <Inspiration />
       <Testimonials />
+      <Contact simplified={true} />
     </>
   );
 };
