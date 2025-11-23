@@ -95,11 +95,11 @@ const Tile: React.FC = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="rounded-2xl overflow-hidden shadow-2xl">
+              <div className="overflow-hidden h-[500px] md:h-[600px]">
                 <img 
-                  src="/products/tile.jpg" 
+                  src="/animations/tile.gif" 
                   alt="Beautiful Tile Flooring" 
-                  className="w-full h-auto object-cover"
+                  className="w-full h-full object-cover object-center block"
                 />
               </div>
             </div>
