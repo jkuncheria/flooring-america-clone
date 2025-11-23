@@ -5,7 +5,7 @@ const Hero: React.FC = () => {
     <section 
       className="relative w-full h-[700px] md:h-[800px] bg-gray-900 overflow-hidden"
       style={{
-        backgroundImage: 'url(/hero-1.png)',
+        backgroundImage: 'url(/hero-video.mp4)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'

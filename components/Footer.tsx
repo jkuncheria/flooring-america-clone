@@ -1,7 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Instagram, Twitter, Youtube } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gray-100 pt-16 pb-8 px-4 md:px-16 border-t border-gray-200">
       <div className="max-w-7xl mx-auto">
@@ -29,12 +34,31 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-gray-900 mb-4 uppercase text-sm tracking-wider">Shop</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><a href="#" className="hover:text-blue-900">Hardwood</a></li>
-              <li><a href="#" className="hover:text-blue-900">Carpet</a></li>
-              <li><a href="#" className="hover:text-blue-900">Luxury Vinyl</a></li>
-              <li><a href="#" className="hover:text-blue-900">Tile</a></li>
-              <li><a href="#" className="hover:text-blue-900">Laminate</a></li>
-              <li><a href="#" className="hover:text-blue-900">Waterproof Flooring</a></li>
+              <li>
+                <Link to="/hardwood" onClick={scrollToTop} className="hover:text-blue-900">
+                  Hardwood
+                </Link>
+              </li>
+              <li>
+                <Link to="/carpet" onClick={scrollToTop} className="hover:text-blue-900">
+                  Carpet
+                </Link>
+              </li>
+              <li>
+                <Link to="/luxury-vinyl" onClick={scrollToTop} className="hover:text-blue-900">
+                  Luxury Vinyl
+                </Link>
+              </li>
+              <li>
+                <Link to="/tile" onClick={scrollToTop} className="hover:text-blue-900">
+                  Tile
+                </Link>
+              </li>
+              <li>
+                <Link to="/laminate" onClick={scrollToTop} className="hover:text-blue-900">
+                  Laminate
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -42,11 +66,26 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold text-gray-900 mb-4 uppercase text-sm tracking-wider">Resources</h4>
             <ul className="space-y-2 text-sm text-gray-600">
-              <li><a href="#" className="hover:text-blue-900">My Floor Style App</a></li>
-              <li><a href="#" className="hover:text-blue-900">Design Magazine</a></li>
-              <li><a href="#" className="hover:text-blue-900">Finance</a></li>
-              <li><a href="#" className="hover:text-blue-900">Warranty Guide</a></li>
-              <li><a href="#" className="hover:text-blue-900">Care & Maintenance</a></li>
+              <li>
+                <Link to="/about" onClick={scrollToTop} className="hover:text-blue-900">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/financing" onClick={scrollToTop} className="hover:text-blue-900">
+                  Financing
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" onClick={scrollToTop} className="hover:text-blue-900">
+                  FAQ
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" onClick={scrollToTop} className="hover:text-blue-900">
+                  Contact
+                </Link>
+              </li>
             </ul>
           </div>
 

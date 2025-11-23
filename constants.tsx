@@ -3,17 +3,11 @@ import { NavItem, Category, Feature } from './types';
 import { BadgeCheck, Users, Wrench, Truck } from 'lucide-react';
 
 export const NAV_ITEMS: NavItem[] = [
-  { 
-    label: 'Floors', 
-    href: '#floors',
-    subItems: [
-      { label: 'Hardwood', href: '/hardwood' },
-      { label: 'Carpet', href: '/carpet' },
-      { label: 'Tile', href: '/tile' },
-      { label: 'Luxury Vinyl', href: '/luxury-vinyl' },
-      { label: 'Laminate', href: '/laminate' }
-    ]
-  },
+  { label: 'Hardwood', href: '/hardwood' },
+  { label: 'Carpet', href: '/carpet' },
+  { label: 'Tile', href: '/tile' },
+  { label: 'Luxury Vinyl', href: '/luxury-vinyl' },
+  { label: 'Laminate', href: '/laminate' },
   { label: 'About Us', href: '/about' },
   { label: 'Financing', href: '/financing' },
   { label: 'FAQ', href: '/faq' },

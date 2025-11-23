@@ -1,24 +1,22 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, MapPin, Search, ShoppingCart, ChevronDown, Phone, Mail } from 'lucide-react';
+import { Menu, X, Phone, Mail } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <header className="w-full flex flex-col font-sans z-50 relative">
       {/* Top Bar */}
-      <div className="bg-gray-100 text-xs py-2 px-4 flex justify-between items-center border-b border-gray-200">
-        <div className="hidden md:flex space-x-4 text-gray-600">
-          <span>Design Magazine</span>
-          <span>|</span>
-          <span>My Floor Style App</span>
-        </div>
-        <div className="flex-1 md:flex-none text-center md:text-right text-blue-900 font-semibold">
-          <span className="mr-2">GET UP TO 18 MONTHS FINANCING*</span>
-          <a href="#details" className="underline hover:text-blue-700">See Details</a>
+      <div className="bg-gray-100 text-xs py-2 px-4 flex justify-center items-center border-b border-gray-200">
+        <div className="text-center text-blue-900 font-semibold">
+          <span className="mr-2">🎉 WINTER CLEARANCE EVENT: UP TO 30% OFF FLOORING</span>
+          <Link to="/contact" onClick={scrollToTop} className="underline hover:text-blue-700">Shop Now</Link>
         </div>
       </div>
 
@@ -28,7 +26,7 @@ const Header: React.FC = () => {
           
           {/* Logo & Mobile Menu Toggle */}
           <div className="w-full md:w-auto flex justify-between items-center">
-            <Link to="/" className="flex items-center space-x-2">
+            <Link to="/" onClick={scrollToTop} className="flex items-center space-x-2">
                {/* Placeholder for Logo - Using Text for fidelity if image fails, but styling to match */}
                <div className="text-3xl font-bold text-blue-900 tracking-tighter">
                  FLOORING<span className="text-gray-500 font-light">AMERICA</span>
@@ -38,6 +36,7 @@ const Header: React.FC = () => {
             <div className="flex items-center gap-2 md:hidden">
               <Link 
                 to="/contact"
+                onClick={scrollToTop}
                 className="p-2 border-2 border-blue-900 text-blue-900 rounded-lg"
               >
                 <Mail className="w-5 h-5" />
@@ -61,6 +60,7 @@ const Header: React.FC = () => {
           <div className="hidden md:flex items-center space-x-3">
             <Link 
               to="/contact"
+              onClick={scrollToTop}
               className="flex items-center border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-semibold text-sm px-4 py-2 rounded-lg transition-all"
             >
               <Mail className="w-4 h-4 mr-2" />
@@ -97,47 +97,13 @@ const Header: React.FC = () => {
       {/* Navigation Bar */}
       <nav className={`bg-blue-900 text-white ${isMenuOpen ? 'block' : 'hidden'} md:block`}>
         <div className="container mx-auto px-4 md:px-16">
-          <ul className="flex flex-col md:flex-row md:space-x-8 text-sm font-semibold py-4 md:py-0">
+          <ul className="flex flex-col md:flex-row md:justify-center md:space-x-8 lg:space-x-12 text-sm font-extrabold py-4 md:py-0">
             {NAV_ITEMS.map((item) => (
               <li 
                 key={item.label} 
-                className="border-b border-blue-800 md:border-none last:border-none relative"
-                onMouseEnter={() => item.subItems && window.innerWidth >= 768 ? setOpenDropdown(item.label) : null}
-                onMouseLeave={() => item.subItems && window.innerWidth >= 768 ? setOpenDropdown(null) : null}
+                className="border-b border-blue-800 md:border-none last:border-none"
               >
-                {item.subItems ? (
-                  <>
-                    <button
-                      onClick={() => {
-                        if (window.innerWidth < 768) {
-                          setOpenDropdown(openDropdown === item.label ? null : item.label);
-                        }
-                      }}
-                      className="w-full flex items-center justify-between py-3 md:py-4 hover:text-yellow-400 transition-colors"
-                    >
-                      <span>{item.label.toUpperCase()}</span>
-                      <ChevronDown className={`w-4 h-4 ml-1 transition-transform ${openDropdown === item.label ? 'rotate-180' : ''}`} />
-                    </button>
-                    {openDropdown === item.label && (
-                      <ul className="md:absolute md:top-full md:left-0 md:bg-blue-800 md:rounded-lg md:shadow-xl md:min-w-[200px] md:mt-0 mt-2 md:py-2 border-t border-blue-700 md:border-t-0">
-                        {item.subItems.map((subItem) => (
-                          <li key={subItem.label}>
-                            <Link
-                              to={subItem.href}
-                              className="block px-4 py-3 hover:bg-blue-700 hover:text-yellow-400 transition-colors"
-                              onClick={() => {
-                                setIsMenuOpen(false);
-                                setOpenDropdown(null);
-                              }}
-                            >
-                              {subItem.label}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    )}
-                  </>
-                ) : item.href.startsWith('#') ? (
+                {item.href.startsWith('#') ? (
                   <a 
                     href={item.href} 
                     className="block py-3 md:py-4 hover:text-yellow-400 transition-colors"
@@ -148,7 +114,10 @@ const Header: React.FC = () => {
                   <Link 
                     to={item.href} 
                     className="block py-3 md:py-4 hover:text-yellow-400 transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      scrollToTop();
+                    }}
                   >
                     {item.label.toUpperCase()}
                   </Link>

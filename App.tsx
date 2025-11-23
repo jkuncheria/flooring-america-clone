@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import AIChat from './components/AIChat';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import About from './pages/About';
 import Financing from './pages/Financing';
@@ -15,10 +16,11 @@ import LuxuryVinyl from './pages/LuxuryVinyl';
 import Laminate from './pages/Laminate';
 
 const App: React.FC = () => {
-  return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Header />
+      return (
+        <Router>
+          <ScrollToTop />
+          <div className="min-h-screen flex flex-col">
+            <Header />
         
         <main className="flex-grow">
           <Routes>
