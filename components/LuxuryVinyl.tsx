@@ -1,5 +1,6 @@
 import React from 'react';
-import { CheckCircle, Droplet, Shield, Sparkles, ArrowRight, Wrench } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { CheckCircle, Droplet, Shield, Sparkles, ArrowRight, Wrench, Phone } from 'lucide-react';
 
 const LuxuryVinyl: React.FC = () => {
   const vinylTypes = [
@@ -85,13 +86,14 @@ const LuxuryVinyl: React.FC = () => {
                 flooring offers the look of hardwood or tile with superior water resistance and easy maintenance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 group">
-                  Shop Luxury Vinyl
+                <Link to="/contact" className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 group">
+                  Contact Us
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                </button>
-                <button className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-4 px-8 rounded-xl transition-all">
-                  Get Free Estimate
-                </button>
+                </Link>
+                <a href="tel:18475265480" className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-4 px-8 rounded-xl transition-all flex items-center justify-center gap-2">
+                  <Phone className="w-5 h-5" />
+                  Call Us
+                </a>
               </div>
             </div>
             <div className="relative">
@@ -245,13 +247,14 @@ const LuxuryVinyl: React.FC = () => {
             to explore options for your space.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 group">
-              Schedule Consultation
+            <Link to="/contact" className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 group">
+              Contact Us
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-4 px-8 rounded-xl transition-all">
-              View Showroom
-            </button>
+            </Link>
+            <a href="tel:18475265480" className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-4 px-8 rounded-xl transition-all flex items-center justify-center gap-2">
+              <Phone className="w-5 h-5" />
+              Call Us
+            </a>
           </div>
         </div>
 

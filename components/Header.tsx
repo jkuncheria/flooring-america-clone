@@ -15,8 +15,8 @@ const Header: React.FC = () => {
       {/* Top Bar */}
       <div className="bg-gray-100 text-xs py-2 px-4 flex justify-center items-center border-b border-gray-200">
         <div className="text-center text-blue-900 font-semibold">
-          <span className="mr-2">🎉 WINTER CLEARANCE EVENT: UP TO 30% OFF FLOORING</span>
-          <Link to="/contact" onClick={scrollToTop} className="underline hover:text-blue-700">Shop Now</Link>
+          <span className="mr-2">🏠 WE OFFER FLEXIBLE FINANCING OPTIONS!</span>
+          <Link to="/financing" onClick={scrollToTop} className="underline hover:text-blue-700">Learn More</Link>
         </div>
       </div>
 
