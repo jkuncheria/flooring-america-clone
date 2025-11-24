@@ -1,6 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Hero: React.FC = () => {
+  const scrollToProducts = () => {
+    const productsSection = document.getElementById('our-products');
+    if (productsSection) {
+      productsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section 
       className="relative w-full h-[700px] md:h-[800px] bg-gray-900 overflow-hidden"
@@ -24,12 +32,18 @@ const Hero: React.FC = () => {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4">
-          <button className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded shadow-lg transition transform hover:scale-105">
-            SHOP NOW
+          <button 
+            onClick={scrollToProducts}
+            className="bg-yellow-500 hover:bg-yellow-400 text-blue-900 font-bold py-3 px-8 rounded shadow-lg transition transform hover:scale-105"
+          >
+            SEE OUR PRODUCTS
           </button>
-          <button className="bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-8 rounded shadow-lg transition transform hover:scale-105">
+          <Link 
+            to="/financing"
+            className="bg-white hover:bg-gray-100 text-blue-900 font-bold py-3 px-8 rounded shadow-lg transition transform hover:scale-105 text-center"
+          >
             VIEW FINANCING
-          </button>
+          </Link>
         </div>
       </div>
 

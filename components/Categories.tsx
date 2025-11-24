@@ -4,7 +4,7 @@ import { CATEGORIES } from '../constants';
 
 const Categories: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-50 px-4 md:px-16">
+    <section id="our-products" className="py-16 bg-gray-50 px-4 md:px-16">
       <div className="text-center mb-12">
         <h2 className="text-3xl font-bold text-gray-900 mb-2">OUR PRODUCTS</h2>
         <div className="w-16 h-1 bg-yellow-500 mx-auto"></div>
@@ -54,9 +54,12 @@ const Categories: React.FC = () => {
       </div>
       
       <div className="mt-12 text-center">
-          <button className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-2 px-6 rounded transition-colors">
+          <Link 
+            to="/hardwood"
+            className="inline-block border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-2 px-6 rounded transition-colors"
+          >
               VIEW ALL FLOORS
-          </button>
+          </Link>
       </div>
     </section>
   );
