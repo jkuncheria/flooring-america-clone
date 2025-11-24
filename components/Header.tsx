@@ -26,12 +26,12 @@ const Header: React.FC = () => {
           
           {/* Logo & Mobile Menu Toggle */}
           <div className="w-full md:w-auto flex justify-between items-center">
-            <Link to="/" onClick={scrollToTop} className="flex items-center space-x-2">
-               {/* Placeholder for Logo - Using Text for fidelity if image fails, but styling to match */}
-               <div className="text-3xl font-bold text-blue-900 tracking-tighter">
-                 FLOORING<span className="text-gray-500 font-light">AMERICA</span>
-                 <span className="text-yellow-500 text-4xl leading-none">.</span>
-               </div>
+            <Link to="/" onClick={scrollToTop} className="flex items-center">
+               <img 
+                 src="/hometownlogo.png" 
+                 alt="Hometown Flooring Designs" 
+                 className="h-12 md:h-16 w-auto object-contain"
+               />
             </Link>
             <div className="flex items-center gap-2 md:hidden">
               <Link 
@@ -47,12 +47,12 @@ const Header: React.FC = () => {
               >
                 <Phone className="w-5 h-5" />
               </a>
-              <button 
+            <button 
                 className="p-2 text-gray-600"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-              >
-                {isMenuOpen ? <X /> : <Menu />}
-              </button>
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X /> : <Menu />}
+            </button>
             </div>
           </div>
 
@@ -104,12 +104,12 @@ const Header: React.FC = () => {
                 className="border-b border-blue-800 md:border-none last:border-none"
               >
                 {item.href.startsWith('#') ? (
-                  <a 
-                    href={item.href} 
-                    className="block py-3 md:py-4 hover:text-yellow-400 transition-colors"
-                  >
-                    {item.label.toUpperCase()}
-                  </a>
+                <a 
+                  href={item.href} 
+                  className="block py-3 md:py-4 hover:text-yellow-400 transition-colors"
+                >
+                  {item.label.toUpperCase()}
+                </a>
                 ) : (
                   <Link 
                     to={item.href} 

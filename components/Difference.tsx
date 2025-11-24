@@ -6,7 +6,7 @@ const Difference: React.FC = () => {
     <section className="py-16 bg-white px-4 md:px-16">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900">THE FLOORING AMERICA DIFFERENCE</h2>
+            <h2 className="text-3xl font-bold text-gray-900">THE HOMETOWN FLOORING DIFFERENCE</h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
                 We are locally owned and operated, and we're dedicated to helping you find the perfect floor for the way you live.
             </p>
@@ -15,7 +15,7 @@ const Difference: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {DIFFERENCE_FEATURES.map((feature, idx) => (
                 <div key={idx} className="flex flex-col items-center text-center p-6 hover:bg-gray-50 rounded-lg transition-colors">
-                    <div className="bg-blue-50 p-4 rounded-full mb-6">
+                    <div className="bg-red-50 p-4 rounded-full mb-6">
                         {feature.icon}
                     </div>
                     <h3 className="text-xl font-bold text-gray-900 mb-3">{feature.title}</h3>

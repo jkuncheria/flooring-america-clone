@@ -16,13 +16,13 @@ import LuxuryVinyl from './pages/LuxuryVinyl';
 import Laminate from './pages/Laminate';
 
 const App: React.FC = () => {
-      return (
+  return (
         <Router>
           <ScrollToTop />
-          <div className="min-h-screen flex flex-col">
-            <Header />
-        
-        <main className="flex-grow">
+    <div className="min-h-screen flex flex-col">
+      <Header />
+      
+      <main className="flex-grow">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -35,13 +35,13 @@ const App: React.FC = () => {
             <Route path="/luxury-vinyl" element={<LuxuryVinyl />} />
             <Route path="/laminate" element={<Laminate />} />
           </Routes>
-        </main>
+      </main>
 
-        <Footer />
-        
-        {/* Integrated Gemini AI Assistant */}
-        <AIChat />
-      </div>
+      <Footer />
+      
+      {/* Integrated Gemini AI Assistant */}
+      <AIChat />
+    </div>
     </Router>
   );
 };

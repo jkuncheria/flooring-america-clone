@@ -209,14 +209,14 @@ const Testimonials: React.FC = () => {
           </h2>
           <div className="w-20 h-1 bg-yellow-500 mx-auto mb-6"></div>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
-            Don't just take our word for it. See what real customers have to say about their Flooring America experience.
+            Don't just take our word for it. See what real customers have to say about their Hometown Flooring experience.
           </p>
         </div>
 
         {/* Elfsight Widget Container */}
         <div 
           ref={widgetRef}
-          className="elfsight-app-03c5492a-a64e-43c7-8dc3-cc7619bbf80d" 
+          className="elfsight-app-61885ebe-eeb0-4b3c-ab7d-685590088553" 
           data-elfsight-app-lazy
           style={{ minHeight: showFallback ? '0' : '400px' }}
         ></div>

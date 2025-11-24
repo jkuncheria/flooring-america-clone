@@ -6,7 +6,7 @@ import { sendMessageToGemini } from '../services/geminiService';
 const AIChat: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>([
-    { id: 'welcome', role: 'model', text: 'Hi there! I\'m your Flooring America Smart Assistant. Looking for the perfect hardwood or maybe some cozy carpet? Ask me anything!' }
+    { id: 'welcome', role: 'model', text: 'Hi there! I\'m your Hometown Flooring Smart Assistant. Looking for the perfect hardwood or maybe some cozy carpet? Ask me anything!' }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -58,17 +58,17 @@ const AIChat: React.FC = () => {
         <div className="bg-white rounded-lg shadow-2xl w-80 sm:w-96 h-[500px] flex flex-col border border-gray-200 mb-4 animate-in slide-in-from-bottom-10 duration-300">
           
           {/* Chat Header */}
-          <div className="bg-blue-900 text-white p-4 rounded-t-lg flex justify-between items-center">
+          <div className="bg-stone-50 text-blue-900 p-4 rounded-t-lg flex justify-between items-center">
             <div className="flex items-center">
               <div className="bg-white p-1.5 rounded-full mr-3">
                  <Bot className="w-5 h-5 text-blue-900" />
               </div>
               <div>
                 <h3 className="font-bold text-sm">Flooring Assistant</h3>
-                <p className="text-xs text-blue-200">Powered by Gemini</p>
+                <p className="text-xs text-blue-600">Powered by Gemini</p>
               </div>
             </div>
-            <button onClick={() => setIsOpen(false)} className="hover:bg-blue-800 p-1 rounded transition-colors">
+            <button onClick={() => setIsOpen(false)} className="hover:bg-stone-100 p-1 rounded transition-colors">
               <X className="w-5 h-5" />
             </button>
           </div>
@@ -80,7 +80,7 @@ const AIChat: React.FC = () => {
                 <div 
                   className={`max-w-[85%] p-3 rounded-lg text-sm leading-relaxed ${
                     msg.role === 'user' 
-                      ? 'bg-blue-600 text-white rounded-br-none' 
+                      ? 'bg-blue-900 text-white rounded-br-none' 
                       : 'bg-white text-gray-800 border border-gray-200 rounded-bl-none shadow-sm'
                   }`}
                 >
@@ -91,7 +91,7 @@ const AIChat: React.FC = () => {
             {isLoading && (
               <div className="flex justify-start">
                 <div className="bg-white p-3 rounded-lg border border-gray-200 shadow-sm rounded-bl-none">
-                  <Loader2 className="w-5 h-5 animate-spin text-blue-600" />
+                  <Loader2 className="w-5 h-5 animate-spin text-blue-900" />
                 </div>
               </div>
             )}
@@ -107,12 +107,12 @@ const AIChat: React.FC = () => {
                 onChange={(e) => setInputValue(e.target.value)}
                 onKeyDown={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Type your question..."
-                className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
+                className="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:border-blue-900 focus:ring-1 focus:ring-blue-900"
               />
               <button 
                 onClick={handleSend}
                 disabled={isLoading || !inputValue.trim()}
-                className="bg-blue-900 hover:bg-blue-800 text-white p-2 rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                className="bg-stone-50 hover:bg-stone-100 text-blue-900 p-2 rounded-full disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
               >
                 <Send className="w-4 h-4" />
               </button>
@@ -125,7 +125,7 @@ const AIChat: React.FC = () => {
       {!isOpen && (
         <button 
           onClick={() => setIsOpen(true)}
-          className="bg-blue-900 hover:bg-blue-800 text-white p-4 rounded-full shadow-lg transition-transform hover:scale-110 flex items-center gap-2 group"
+          className="bg-stone-50 hover:bg-stone-100 text-blue-900 p-4 rounded-full shadow-lg transition-transform hover:scale-110 flex items-center gap-2 group"
         >
           <MessageCircle className="w-6 h-6" />
           <span className="max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 ease-in-out whitespace-nowrap text-sm font-bold">

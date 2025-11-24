@@ -14,14 +14,14 @@ const Categories: React.FC = () => {
         {CATEGORIES.map((cat) => {
           const content = (
             <>
-              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-md mb-4 border-4 border-white group-hover:border-yellow-500 transition-colors duration-300">
-                <img 
-                  src={cat.image} 
-                  alt={cat.name} 
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
-                />
-              </div>
-              <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-900">{cat.name}</h3>
+            <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden shadow-md mb-4 border-4 border-white group-hover:border-yellow-500 transition-colors duration-300">
+              <img 
+                src={cat.image} 
+                alt={cat.name} 
+                className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+              />
+            </div>
+            <h3 className="text-lg font-semibold text-gray-800 group-hover:text-blue-900">{cat.name}</h3>
             </>
           );
 
@@ -48,7 +48,7 @@ const Categories: React.FC = () => {
           return (
             <div key={cat.id} className="group cursor-pointer flex flex-col items-center">
               {content}
-            </div>
+          </div>
           );
         })}
       </div>

@@ -1,6 +1,6 @@
 {
-  "name": "Flooring America Clone",
-  "description": "A recreation of the Flooring America landing page with an integrated AI Flooring Assistant powered by Gemini.",
+  "name": "Hometown Flooring Clone",
+  "description": "A recreation of the Hometown Flooring landing page with an integrated AI Flooring Assistant powered by Gemini.",
   "requestFramePermissions": [
     "microphone"
   ]

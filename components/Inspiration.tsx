@@ -7,13 +7,13 @@ const Inspiration: React.FC = () => {
         
         {/* Left Side Text */}
         <div>
-            <span className="text-yellow-500 font-bold tracking-wider text-sm">GET INSPIRED</span>
+            <span className="text-stone-200 font-bold tracking-wider text-sm">GET INSPIRED</span>
             <h2 className="text-4xl font-bold mt-2 mb-6 leading-tight">Bring Your Vision to Life</h2>
             <p className="text-gray-300 mb-8 text-lg leading-relaxed">
                 Not sure where to start? Browse our room gallery to see how different floors look in real homes, or upload your own photo to our Room Visualizer to see it in your space instantly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded transition-colors">
+                <button className="bg-red-600 hover:bg-red-500 text-white font-bold py-3 px-8 rounded transition-colors">
                     EXPLORE ROOM SCENES
                 </button>
                 <button className="border border-white hover:bg-white hover:text-gray-900 text-white font-bold py-3 px-8 rounded transition-colors">

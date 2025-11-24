@@ -1,190 +1,144 @@
 import React from 'react';
-import { Award, Heart, Shield, Users, Clock, MapPin } from 'lucide-react';
+import { Award, Heart, Shield, Users, Clock, Home, DollarSign, CheckCircle, Wrench } from 'lucide-react';
 
 const About: React.FC = () => {
-  const values = [
+  const services = [
     {
-      icon: <Heart className="w-8 h-8 text-blue-900" />,
-      title: 'Customer First',
-      description: 'Your satisfaction is our top priority. We go above and beyond to ensure you love your new floors.'
+      icon: <Home className="w-8 h-8 text-blue-900" />,
+      title: 'Beautiful Flooring Options',
+      description: 'At Hometown Flooring Designs, we offer a diverse range of flooring options to suit every style and budget. From hardwood to carpet, we\'ve got you covered! We carry the following manufacturers: Engineered Floors/Dreamweaver carpets, Mohawk, Phenix, Southwind, Fusion, Lakeshore, and Somerset hardwood.'
     },
     {
-      icon: <Award className="w-8 h-8 text-blue-900" />,
-      title: 'Quality Products',
-      description: 'We only carry the finest flooring materials from trusted manufacturers you can rely on.'
-    },
-    {
-      icon: <Shield className="w-8 h-8 text-blue-900" />,
-      title: 'Trusted Guarantee',
-      description: 'Our Adore Your Floor Guarantee means if you don\'t love it, we\'ll replace it for free.'
+      icon: <Wrench className="w-8 h-8 text-blue-900" />,
+      title: 'Expert Installation Services',
+      description: 'Our skilled team of installers will ensure that your new flooring is installed correctly and efficiently. You can trust us to get the job done right!'
     },
     {
       icon: <Users className="w-8 h-8 text-blue-900" />,
-      title: 'Expert Team',
-      description: 'Our knowledgeable staff and certified installers are here to guide you every step of the way.'
+      title: 'Free In-Home Consultation',
+      description: 'Not sure which flooring option is right for you? Schedule a free in-home consultation with one of our experts and we\'ll help you find the perfect fit.'
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-blue-900" />,
+      title: 'Affordable Prices',
+      description: 'At Hometown Flooring Designs, we believe that everyone deserves beautiful flooring without breaking the bank. That\'s why we offer competitive pricing on all of our products and services.'
+    },
+    {
+      icon: <Shield className="w-8 h-8 text-blue-900" />,
+      title: 'Customer Satisfaction Guaranteed',
+      description: 'We pride ourselves on providing excellent customer service and ensuring that our customers are completely satisfied with their flooring. If you\'re not happy, we\'ll make it right!'
     }
-  ];
-
-  const stats = [
-    { number: '500+', label: 'Store Locations', icon: <MapPin className="w-6 h-6" /> },
-    { number: '25+', label: 'Years Experience', icon: <Clock className="w-6 h-6" /> },
-    { number: '50K+', label: 'Happy Customers', icon: <Users className="w-6 h-6" /> },
-    { number: '4.9/5', label: 'Average Rating', icon: <Award className="w-6 h-6" /> }
   ];
 
   return (
     <section className="py-24 bg-white px-4 md:px-16">
       <div className="max-w-7xl mx-auto">
         
-        {/* Header */}
+        {/* Hero Header */}
         <div className="text-center mb-20">
           <span className="text-blue-900 font-bold tracking-wider text-sm uppercase">ABOUT US</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4 mb-5">
-            Your Local Flooring Experts
-          </h2>
-          <div className="w-20 h-1 bg-yellow-500 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            For over 25 years, Flooring America has been Wauconda's premier destination for quality flooring solutions. 
-            We're locally owned and operated, dedicated to helping you find the perfect floor for the way you live.
-          </p>
-        </div>
-
-        {/* Story Section */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-24">
-          <div>
-            <h3 className="text-3xl font-bold text-gray-900 mb-6">Our Story</h3>
-            <div className="space-y-4 text-gray-700 leading-relaxed">
-              <p>
-                What started as a small local flooring store has grown into a trusted name in home improvement. 
-                We've built our reputation one satisfied customer at a time, focusing on quality products, 
-                expert installation, and exceptional customer service.
-              </p>
-              <p>
-                As part of the Flooring America family with over 500 locations nationwide, we combine the 
-                buying power of a national brand with the personalized service of a local business. Our team 
-                understands that choosing new flooring is a significant investment, and we're here to make 
-                the process as smooth and enjoyable as possible.
-              </p>
-              <p>
-                Whether you're renovating a single room or your entire home, we have the expertise, selection, 
-                and commitment to quality that you can trust. We're not just selling floors—we're helping you 
-                create the home of your dreams.
-              </p>
-            </div>
-          </div>
-          <div className="relative">
-            <div className="bg-gradient-to-br from-blue-50 to-gray-50 rounded-2xl p-8 h-full flex items-center justify-center">
-              <div className="text-center">
-                <div className="text-6xl font-bold text-blue-900 mb-4">25+</div>
-                <div className="text-2xl text-gray-700 mb-2">Years of Excellence</div>
-                <div className="text-gray-600">Serving Wauconda and surrounding communities</div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 mt-4 mb-6">
+            Flooring Installers You Can Trust
+          </h1>
+          <div className="w-20 h-1 bg-yellow-500 mx-auto mb-8"></div>
+          
+          {/* Family-Owned Emphasis */}
+          <div className="bg-gradient-to-br from-blue-50 to-yellow-50 rounded-2xl p-8 md:p-12 mb-12 max-w-4xl mx-auto border-2 border-blue-200 shadow-lg">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+              <div className="bg-blue-900 rounded-full p-6 shadow-xl">
+                <Heart className="w-12 h-12 text-yellow-400" />
+              </div>
+              <div className="text-center md:text-left">
+                <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-3">
+                  Family-Owned & Operated
+                </h2>
+                <p className="text-2xl md:text-3xl font-bold text-gray-700">
+                  <span className="text-yellow-500">30 Years</span> of Excellence
+                </p>
+                <p className="text-lg text-gray-600 mt-3">
+                  We are a family-owned and operated business providing quality installations of Carpet, Hardwood, Luxury Vinyl, Laminate, and Sheet Vinyl.
+                </p>
               </div>
             </div>
           </div>
+
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+            Transform Your Home With <span className="text-blue-900">Hometown Flooring Designs</span>
+          </h2>
         </div>
 
-        {/* Values Section */}
+        {/* Services Section */}
         <div className="mb-24">
-          <div className="text-center mb-16">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Values</h3>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              These core principles guide everything we do and shape how we serve our customers.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, idx) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service, idx) => (
               <div 
                 key={idx} 
-                className="bg-gray-50 rounded-2xl p-8 text-center hover:bg-blue-50 transition-colors duration-300 border border-gray-100 hover:border-blue-200"
+                className="bg-gray-50 rounded-2xl p-8 hover:bg-blue-50 transition-all duration-300 border border-gray-100 hover:border-blue-200 hover:shadow-xl transform hover:-translate-y-1"
               >
                 <div className="bg-white p-4 rounded-full inline-flex mb-6 shadow-sm">
-                  {value.icon}
+                  {service.icon}
                 </div>
-                <h4 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h4>
-                <p className="text-gray-600 leading-relaxed text-sm">{value.description}</p>
+                <h3 className="text-xl font-bold text-gray-900 mb-4">{service.title}</h3>
+                <p className="text-gray-600 leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Stats Section */}
-        <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-12 md:p-16 mb-24">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl font-bold text-white mb-4">By The Numbers</h3>
-            <p className="text-blue-100 text-lg max-w-2xl mx-auto">
-              Our commitment to excellence shows in our track record
+        {/* Family Story Section */}
+        <div className="bg-gradient-to-br from-blue-900 to-blue-800 rounded-2xl p-12 md:p-16 mb-24 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <Heart className="w-16 h-16 text-yellow-400 mx-auto mb-6" />
+            <h3 className="text-3xl md:text-4xl font-bold mb-6">
+              Built on Family Values
+            </h3>
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed mb-6">
+              For three decades, Hometown Flooring Designs has been a trusted name in flooring, built on the foundation of family values, integrity, and a commitment to excellence. As a family-owned and operated business, we understand that your home is more than just a house—it's where memories are made.
             </p>
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <div className="flex justify-center mb-4 text-yellow-400">
-                  {stat.icon}
-                </div>
-                <div className="text-4xl md:text-5xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-blue-100 text-sm font-semibold uppercase tracking-wide">{stat.label}</div>
-              </div>
-            ))}
+            <p className="text-lg md:text-xl text-blue-100 leading-relaxed">
+              Every installation is personal to us. We treat your home like our own, ensuring quality craftsmanship and attention to detail that only comes from a business that cares deeply about its reputation and its customers.
+            </p>
           </div>
         </div>
 
         {/* Why Choose Us */}
         <div className="bg-gray-50 rounded-2xl p-8 md:p-12">
           <div className="max-w-4xl mx-auto">
-            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Flooring America?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="flex items-start">
-                <div className="bg-blue-900 text-white rounded-full p-2 mr-4 flex-shrink-0">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
-                </div>
+            <h3 className="text-3xl font-bold text-gray-900 mb-8 text-center">Why Choose Hometown Flooring Designs?</h3>
+            <div className="space-y-4">
+              <div className="flex items-start bg-white rounded-xl p-6 shadow-sm">
+                <CheckCircle className="w-6 h-6 text-blue-900 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Locally Owned & Operated</h4>
-                  <p className="text-gray-600 text-sm">We're your neighbors, invested in your community and committed to your satisfaction.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">30 Years of Family Tradition</h4>
+                  <p className="text-gray-600">Three decades of experience means we've seen it all and know how to handle every flooring challenge with expertise and care.</p>
                 </div>
               </div>
-              <div className="flex items-start">
-                <div className="bg-blue-900 text-white rounded-full p-2 mr-4 flex-shrink-0">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
-                </div>
+              <div className="flex items-start bg-white rounded-xl p-6 shadow-sm">
+                <CheckCircle className="w-6 h-6 text-blue-900 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Expert Installation</h4>
-                  <p className="text-gray-600 text-sm">Our certified installers are trained professionals who take pride in their craftsmanship.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Personalized Service</h4>
+                  <p className="text-gray-600">As a family business, we take the time to understand your needs and provide personalized solutions that fit your lifestyle and budget.</p>
                 </div>
               </div>
-              <div className="flex items-start">
-                <div className="bg-blue-900 text-white rounded-full p-2 mr-4 flex-shrink-0">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
-                </div>
+              <div className="flex items-start bg-white rounded-xl p-6 shadow-sm">
+                <CheckCircle className="w-6 h-6 text-blue-900 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Incredible Selection</h4>
-                  <p className="text-gray-600 text-sm">From hardwood to carpet, luxury vinyl to tile—we have options for every style and budget.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Quality Products from Trusted Manufacturers</h4>
+                  <p className="text-gray-600">We partner with leading manufacturers including Engineered Floors/Dreamweaver, Mohawk, Phenix, Southwind, Fusion, Lakeshore, and Somerset to bring you the best selection.</p>
                 </div>
               </div>
-              <div className="flex items-start">
-                <div className="bg-blue-900 text-white rounded-full p-2 mr-4 flex-shrink-0">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
-                </div>
+              <div className="flex items-start bg-white rounded-xl p-6 shadow-sm">
+                <CheckCircle className="w-6 h-6 text-blue-900 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Flexible Financing</h4>
-                  <p className="text-gray-600 text-sm">We offer financing options to make your dream floors affordable with payments that fit your budget.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Expert Installation Team</h4>
+                  <p className="text-gray-600">Our skilled installers are trained professionals who take pride in their work and ensure every installation is done right the first time.</p>
                 </div>
               </div>
-              <div className="flex items-start">
-                <div className="bg-blue-900 text-white rounded-full p-2 mr-4 flex-shrink-0">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
-                </div>
+              <div className="flex items-start bg-white rounded-xl p-6 shadow-sm">
+                <CheckCircle className="w-6 h-6 text-blue-900 mr-4 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Adore Your Floor Guarantee</h4>
-                  <p className="text-gray-600 text-sm">If you don't love your new 5-Star floor, we'll replace it for free. That's our promise.</p>
-                </div>
-              </div>
-              <div className="flex items-start">
-                <div className="bg-blue-900 text-white rounded-full p-2 mr-4 flex-shrink-0">
-                  <div className="w-2 h-2 bg-white rounded-full"></div>
-                </div>
-                <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Free Estimates</h4>
-                  <p className="text-gray-600 text-sm">Get a free, no-obligation estimate for your project. We're here to help you plan.</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Your Satisfaction is Our Priority</h4>
+                  <p className="text-gray-600">We stand behind our work. If you're not completely satisfied, we'll make it right—that's our family promise to you.</p>
                 </div>
               </div>
             </div>
@@ -197,4 +151,5 @@ const About: React.FC = () => {
 };
 
 export default About;
+
 
