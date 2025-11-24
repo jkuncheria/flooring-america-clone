@@ -42,7 +42,7 @@ const Header: React.FC = () => {
                 <Mail className="w-5 h-5" />
               </Link>
               <a 
-                href="tel:18003567464"
+                href="tel:18475265480"
                 className="p-2 bg-blue-900 text-white rounded-lg"
               >
                 <Phone className="w-5 h-5" />
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
               Contact
             </Link>
             <a 
-              href="tel:18003567464"
+              href="tel:18475265480"
               className="flex items-center bg-blue-900 hover:bg-blue-800 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-all transform hover:scale-105 shadow-md"
             >
               <Phone className="w-4 h-4 mr-2" />

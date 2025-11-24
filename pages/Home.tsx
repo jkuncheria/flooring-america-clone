@@ -14,7 +14,7 @@ const Home: React.FC = () => {
       <Categories />
       <Visualizer />
       <Difference />
-      <Inspiration />
+      {/* <Inspiration /> */}
       <Testimonials />
       <Contact simplified={true} />
     </>

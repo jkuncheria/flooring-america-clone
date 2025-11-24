@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { CreditCard, CheckCircle, Clock, Shield, DollarSign, ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 
 const Financing: React.FC = () => {
@@ -204,14 +205,14 @@ const Financing: React.FC = () => {
           <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
             Apply for financing today and get approved in minutes. No obligation, no hassle—just the floors you want.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 group">
-              Apply for Financing
+          <div className="flex justify-center">
+            <Link 
+              to="/contact"
+              className="bg-blue-900 hover:bg-blue-800 text-white font-bold py-4 px-8 rounded-xl transition-all transform hover:scale-105 shadow-lg flex items-center justify-center gap-2 group"
+            >
+              Contact Us
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </button>
-            <button className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-4 px-8 rounded-xl transition-all">
-              Learn More
-            </button>
+            </Link>
           </div>
           <p className="text-sm text-gray-500 mt-6">
             *Subject to credit approval. Terms and conditions apply. See store for details.

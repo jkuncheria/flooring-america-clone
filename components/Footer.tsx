@@ -15,13 +15,23 @@ const Footer: React.FC = () => {
           
           {/* Brand */}
           <div>
-            <div className="text-2xl font-bold text-blue-900 tracking-tighter mb-4">
-                 FLOORING<span className="text-gray-500 font-light">AMERICA</span>
-                 <span className="text-yellow-500 text-3xl">.</span>
-            </div>
-            <p className="text-sm text-gray-600 mb-6">
-              With over 500 locations nationwide, we are your local neighborhood flooring experts.
+            <Link to="/" onClick={scrollToTop} className="inline-block mb-4">
+              <img 
+                src="/hometownlogo.png" 
+                alt="Hometown Flooring Designs" 
+                className="h-12 md:h-16 w-auto object-contain"
+              />
+            </Link>
+            <p className="text-sm text-gray-600 mb-4">
+              1000 N Rand unit 201<br />
+              Wauconda, Illinois 60084<br />
+              United States
             </p>
+            <div className="text-sm text-gray-600 mb-4 space-y-1">
+              <p><a href="tel:18475265480" className="hover:text-blue-900">(847) 526-5480</a> Office</p>
+              <p><a href="tel:12244572034" className="hover:text-blue-900">(224) 457-2034</a> Office cell for texting</p>
+              <p><a href="mailto:jennifer@hometownflooringdesigns.com" className="hover:text-blue-900">jennifer@hometownflooringdesigns.com</a></p>
+            </div>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-blue-900 transition-colors"><Facebook className="w-5 h-5"/></a>
               <a href="#" className="text-gray-400 hover:text-pink-600 transition-colors"><Instagram className="w-5 h-5"/></a>
@@ -89,19 +99,18 @@ const Footer: React.FC = () => {
             </ul>
           </div>
 
-           {/* Newsletter */}
+           {/* Hours */}
            <div>
-            <h4 className="font-bold text-gray-900 mb-4 uppercase text-sm tracking-wider">Stay Connected</h4>
-            <p className="text-sm text-gray-600 mb-4">Sign up for our newsletter to get the latest trends and offers.</p>
-            <div className="flex">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="flex-1 border border-gray-300 rounded-l px-3 py-2 text-sm focus:outline-none focus:border-blue-900"
-              />
-              <button className="bg-blue-900 text-white px-4 py-2 text-sm font-bold rounded-r hover:bg-blue-800">
-                JOIN
-              </button>
+            <h4 className="font-bold text-gray-900 mb-4 uppercase text-sm tracking-wider">Hours</h4>
+            <div className="text-sm text-gray-600 space-y-2">
+              <p className="font-semibold text-gray-900">Open today</p>
+              <p>09:00 am – 05:00 pm</p>
+              <div className="pt-2 space-y-1">
+                <p>Monday - Friday 9:00-5:00</p>
+                <p>After 5:00 appts Available Monday-Thursday</p>
+                <p>Saturday by appt</p>
+                <p>Sunday closed</p>
+              </div>
             </div>
           </div>
 
