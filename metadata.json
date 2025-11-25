@@ -1,6 +1,6 @@
 {
-  "name": "Hometown Flooring Clone",
-  "description": "A recreation of the Hometown Flooring landing page with an integrated AI Flooring Assistant powered by Gemini.",
+  "name": "The Carpet Corner",
+  "description": "Family Owned Business Since 1974. The Carpet Corner in Mundelein, Illinois, serving Mundelein, Libertyville, Lake Forest and surrounding areas. Flooring specialist offering carpet, hardwood, laminate, tile, vinyl and more with an integrated AI Flooring Assistant powered by Gemini.",
   "requestFramePermissions": [
     "microphone"
   ]

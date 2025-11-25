@@ -99,47 +99,36 @@ const Contact: React.FC<ContactProps> = ({ simplified = false }) => {
               </p>
 
               <div className="space-y-6">
-                <a href="tel:18475265480" className="group flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-100">
+                <a href="tel:18475665990" className="group flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-100">
                   <div className="bg-gradient-to-br from-blue-900 to-blue-800 p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform shadow-md">
                     <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors">Phone</h4>
-                    <p className="text-gray-700 font-semibold text-lg">(847) 526-5480</p>
+                    <p className="text-gray-700 font-semibold text-lg">(847) 566-5990</p>
                     <p className="text-sm text-gray-500 mt-1">Office</p>
                   </div>
                 </a>
 
-                <a href="tel:12244572034" className="group flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-100">
-                  <div className="bg-gradient-to-br from-blue-900 to-blue-800 p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform shadow-md">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div className="flex-1">
-                    <h4 className="font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors">Cell (Texting)</h4>
-                    <p className="text-gray-700 font-semibold text-lg">(224) 457-2034</p>
-                    <p className="text-sm text-gray-500 mt-1">Office cell for texting</p>
-                  </div>
-                </a>
-
-                <a href="mailto:jennifer@hometownflooringdesigns.com" className="group flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-100">
+                <a href="mailto:thecarpetcorner@yahoo.com" className="group flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-100">
                   <div className="bg-gradient-to-br from-blue-900 to-blue-800 p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform shadow-md flex-shrink-0">
                     <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1 min-w-0">
                     <h4 className="font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors">Email</h4>
-                    <p className="text-gray-700 font-semibold break-words text-sm sm:text-base">jennifer@hometownflooringdesigns.com</p>
+                    <p className="text-gray-700 font-semibold break-words text-sm sm:text-base">thecarpetcorner@yahoo.com</p>
                     <p className="text-sm text-gray-500 mt-1">We respond within 24 hours</p>
                   </div>
                 </a>
 
-                <a href="https://maps.google.com/?q=1000+N+Rand+unit+201+Wauconda+Illinois+60084" target="_blank" rel="noopener noreferrer" className="group flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-100">
+                <a href="https://maps.google.com/?q=907+Diamond+Lake+Road+Mundelein+Illinois+60060" target="_blank" rel="noopener noreferrer" className="group flex items-start p-4 rounded-xl hover:bg-blue-50 transition-all duration-300 border border-transparent hover:border-blue-100">
                   <div className="bg-gradient-to-br from-blue-900 to-blue-800 p-4 rounded-xl mr-4 group-hover:scale-110 transition-transform shadow-md">
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div className="flex-1">
                     <h4 className="font-bold text-gray-900 mb-1 group-hover:text-blue-900 transition-colors">Address</h4>
-                    <p className="text-gray-700 font-semibold">1000 N Rand unit 201</p>
-                    <p className="text-gray-700 font-semibold">Wauconda, Illinois 60084</p>
+                    <p className="text-gray-700 font-semibold">907 Diamond Lake Road</p>
+                    <p className="text-gray-700 font-semibold">Mundelein, Illinois 60060</p>
                     <p className="text-gray-700 font-semibold">United States</p>
                     <p className="text-sm text-blue-900 mt-1 font-semibold group-hover:underline">
                       Get Directions →
@@ -291,22 +280,22 @@ const Contact: React.FC<ContactProps> = ({ simplified = false }) => {
             <div className="space-y-4">
               <div className="bg-blue-50 rounded-lg p-3 mb-4">
                 <p className="font-semibold text-blue-900">Open today</p>
-                <p className="text-gray-700">09:00 am – 05:00 pm</p>
+                <p className="text-gray-700">09:00 am – 05:30 pm</p>
               </div>
               <div className="flex justify-between items-center py-3 border-b border-gray-100">
                 <span className="font-semibold text-gray-900">Monday - Friday</span>
-                <span className="text-gray-600">9:00 AM - 5:00 PM</span>
-              </div>
-              <div className="pt-2 pb-3 border-b border-gray-100">
-                <p className="text-sm text-gray-600">After 5:00 appts Available Monday-Thursday</p>
+                <span className="text-gray-600">9:00 AM - 5:30 PM</span>
               </div>
               <div className="flex justify-between items-center py-3 border-b border-gray-100">
                 <span className="font-semibold text-gray-900">Saturday</span>
-                <span className="text-gray-600">By appointment</span>
+                <span className="text-gray-600">10:00 AM - 4:00 PM</span>
               </div>
               <div className="flex justify-between items-center py-3">
                 <span className="font-semibold text-gray-900">Sunday</span>
                 <span className="text-gray-600">Closed</span>
+              </div>
+              <div className="pt-3 border-t border-gray-100">
+                <p className="text-xs text-gray-500 italic">Holiday Hours May Vary. Please Call For Details.</p>
               </div>
             </div>
           </div>
@@ -320,17 +309,18 @@ const Contact: React.FC<ContactProps> = ({ simplified = false }) => {
             </div>
             <div className="space-y-4">
               <div>
-                <p className="text-gray-600 mb-2">Wauconda Location</p>
-                <p className="text-gray-900 font-semibold">1000 N Rand unit 201</p>
-                <p className="text-gray-900 font-semibold">Wauconda, Illinois 60084</p>
+                <p className="text-gray-600 mb-2">Mundelein Location</p>
+                <p className="text-gray-900 font-semibold">907 Diamond Lake Road</p>
+                <p className="text-gray-900 font-semibold">Mundelein, Illinois 60060</p>
                 <p className="text-gray-900 font-semibold">United States</p>
+                <p className="text-sm text-gray-500 mt-2">Located Near Diamond Lake</p>
               </div>
               <div className="pt-4 border-t border-gray-100">
                 <p className="text-gray-600 mb-4">
                   Visit our showroom to see our full selection of flooring samples and get expert advice from our team.
                 </p>
                 <a 
-                  href="https://maps.google.com/?q=1000+N+Rand+unit+201+Wauconda+Illinois+60084" 
+                  href="https://maps.google.com/?q=907+Diamond+Lake+Road+Mundelein+Illinois+60060" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="inline-block bg-blue-900 hover:bg-blue-800 text-white font-bold py-3 px-6 rounded-xl transition-all"
@@ -389,8 +379,8 @@ const Contact: React.FC<ContactProps> = ({ simplified = false }) => {
                 <p className="text-blue-100 mb-4 text-sm">
                   Call us directly for urgent questions or to speak with a flooring specialist right away.
                 </p>
-                <a href="tel:18475265480" className="bg-white text-blue-900 hover:bg-gray-100 font-bold py-2 px-6 rounded-lg transition-all inline-block">
-                  (847) 526-5480
+                <a href="tel:18475665990" className="bg-white text-blue-900 hover:bg-gray-100 font-bold py-2 px-6 rounded-lg transition-all inline-block">
+                  (847) 566-5990
                 </a>
               </div>
             </div>

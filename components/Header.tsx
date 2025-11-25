@@ -28,8 +28,8 @@ const Header: React.FC = () => {
           <div className="w-full md:w-auto flex justify-between items-center">
             <Link to="/" onClick={scrollToTop} className="flex items-center">
                <img 
-                 src="/hometownlogo.png" 
-                 alt="Hometown Flooring Designs" 
+                 src="/carpetcornerlogo.jpg" 
+                 alt="The Carpet Corner" 
                  className="h-12 md:h-16 w-auto object-contain"
                />
             </Link>
@@ -41,12 +41,12 @@ const Header: React.FC = () => {
               >
                 <Mail className="w-5 h-5" />
               </Link>
-              <a 
-                href="tel:18475265480"
-                className="p-2 bg-blue-900 text-white rounded-lg"
-              >
-                <Phone className="w-5 h-5" />
-              </a>
+            <a 
+              href="tel:18475665990"
+              className="p-2 bg-blue-900 text-white rounded-lg"
+            >
+              <Phone className="w-5 h-5" />
+            </a>
             <button 
                 className="p-2 text-gray-600"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -67,7 +67,7 @@ const Header: React.FC = () => {
               Contact
             </Link>
             <a 
-              href="tel:18475265480"
+              href="tel:18475665990"
               className="flex items-center bg-blue-900 hover:bg-blue-800 text-white font-semibold text-sm px-4 py-2 rounded-lg transition-all transform hover:scale-105 shadow-md"
             >
               <Phone className="w-4 h-4 mr-2" />
@@ -110,6 +110,18 @@ const Header: React.FC = () => {
                 >
                   {item.label.toUpperCase()}
                 </a>
+                ) : item.href.startsWith('http://') || item.href.startsWith('https://') ? (
+                  <a 
+                    href={item.href} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block py-3 md:py-4 hover:text-yellow-400 transition-colors"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                    }}
+                  >
+                    {item.label.toUpperCase()}
+                  </a>
                 ) : (
                   <Link 
                     to={item.href} 

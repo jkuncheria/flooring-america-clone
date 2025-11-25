@@ -17,20 +17,19 @@ const Footer: React.FC = () => {
           <div>
             <Link to="/" onClick={scrollToTop} className="inline-block mb-4">
               <img 
-                src="/hometownlogo.png" 
-                alt="Hometown Flooring Designs" 
+                src="/carpetcornerlogo.jpg" 
+                alt="The Carpet Corner" 
                 className="h-12 md:h-16 w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-gray-600 mb-4">
-              1000 N Rand unit 201<br />
-              Wauconda, Illinois 60084<br />
+              907 Diamond Lake Road<br />
+              Mundelein, Illinois 60060<br />
               United States
             </p>
             <div className="text-sm text-gray-600 mb-4 space-y-1">
-              <p><a href="tel:18475265480" className="hover:text-blue-900">(847) 526-5480</a> Office</p>
-              <p><a href="tel:12244572034" className="hover:text-blue-900">(224) 457-2034</a> Office cell for texting</p>
-              <p><a href="mailto:jennifer@hometownflooringdesigns.com" className="hover:text-blue-900">jennifer@hometownflooringdesigns.com</a></p>
+              <p><a href="tel:18475665990" className="hover:text-blue-900">(847) 566-5990</a> Office</p>
+              <p><a href="mailto:thecarpetcorner@yahoo.com" className="hover:text-blue-900">thecarpetcorner@yahoo.com</a></p>
             </div>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-blue-900 transition-colors"><Facebook className="w-5 h-5"/></a>
@@ -104,12 +103,12 @@ const Footer: React.FC = () => {
             <h4 className="font-bold text-gray-900 mb-4 uppercase text-sm tracking-wider">Hours</h4>
             <div className="text-sm text-gray-600 space-y-2">
               <p className="font-semibold text-gray-900">Open today</p>
-              <p>09:00 am – 05:00 pm</p>
+              <p>09:00 am – 05:30 pm</p>
               <div className="pt-2 space-y-1">
-                <p>Monday - Friday 9:00-5:00</p>
-                <p>After 5:00 appts Available Monday-Thursday</p>
-                <p>Saturday by appt</p>
-                <p>Sunday closed</p>
+                <p>Monday - Friday 9:00 AM - 5:30 PM</p>
+                <p>Saturday 10:00 AM - 4:00 PM</p>
+                <p>Sunday Closed</p>
+                <p className="text-xs text-gray-500 mt-2">Holiday Hours May Vary. Please Call For Details.</p>
               </div>
             </div>
           </div>
@@ -117,7 +116,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="border-t border-gray-300 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
-          <p>&copy; 2025 Hometown Flooring. All Rights Reserved.</p>
+          <p>&copy; 2025 The Carpet Corner. All Rights Reserved.</p>
           <div className="flex space-x-4 mt-4 md:mt-0">
             <a href="#" className="hover:underline">Privacy Policy</a>
             <a href="#" className="hover:underline">Terms of Use</a>

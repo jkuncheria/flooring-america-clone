@@ -6,7 +6,7 @@ const Difference: React.FC = () => {
     <section className="py-16 bg-white px-4 md:px-16">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900">THE HOMETOWN FLOORING DIFFERENCE</h2>
+            <h2 className="text-3xl font-bold text-gray-900">THE CARPET CORNER DIFFERENCE</h2>
             <p className="mt-4 text-gray-600 max-w-2xl mx-auto">
                 We are locally owned and operated, and we're dedicated to helping you find the perfect floor for the way you live.
             </p>

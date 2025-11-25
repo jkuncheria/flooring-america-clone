@@ -7,7 +7,8 @@ export default defineConfig(({ mode }) => {
     return {
       server: {
         port: 3000,
-        host: '0.0.0.0',
+        host: true, // This allows both localhost and network access
+        open: false, // Set to false to prevent browser from opening automatically
       },
       plugins: [react()],
       define: {

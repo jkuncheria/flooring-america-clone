@@ -19,7 +19,7 @@ const FAQ: React.FC = () => {
         },
         {
           question: 'What areas do you serve?',
-          answer: 'We serve Wauconda and surrounding communities throughout the region. Contact us to confirm if we service your specific area. With over 500 locations nationwide, we likely have a store near you.'
+          answer: 'We serve Mundelein, Libertyville, Lake Forest and surrounding areas throughout the region. Contact us to confirm if we service your specific area. We are now open regular hours to help you with all your flooring needs!'
         },
         {
           question: 'Can I visit your showroom?',
@@ -215,10 +215,10 @@ const FAQ: React.FC = () => {
               Contact Us
             </Link>
             <a 
-              href="tel:18003567464"
+              href="tel:18475665990"
               className="border-2 border-blue-900 text-blue-900 hover:bg-blue-900 hover:text-white font-bold py-4 px-8 rounded-xl transition-all inline-flex items-center justify-center gap-2"
             >
-              Call 1-800-FLOORING
+              Call (847) 566-5990
             </a>
           </div>
         </div>
