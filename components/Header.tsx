@@ -26,12 +26,13 @@ const Header: React.FC = () => {
           
           {/* Logo & Mobile Menu Toggle */}
           <div className="w-full md:w-auto flex justify-between items-center">
-            <Link to="/" onClick={scrollToTop} className="flex items-center">
+            <Link to="/" onClick={scrollToTop} className="flex items-center gap-3">
                <img 
                  src="/carpetcornerlogo.jpg" 
                  alt="The Carpet Corner" 
                  className="h-12 md:h-16 w-auto object-contain"
                />
+               <span className="text-xl md:text-2xl font-bold text-blue-900 hidden sm:block">The Carpet Corner</span>
             </Link>
             <div className="flex items-center gap-2 md:hidden">
               <Link 
